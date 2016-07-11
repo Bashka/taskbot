@@ -1,0 +1,19 @@
+{
+    "name": "bashka/taskbot",
+    "version": "0.9",
+    "description": "Telegram-бот для управления задачами",
+    "license": "GNU-3.0",
+    "authors": [
+        {
+            "name": "Artur Sh. Mamedbekov",
+            "email": "Artur-Mamedbekov@yandex.ru"
+        }
+    ],
+    "require": {
+      "php": ">=5.5.0",
+      "doctrine/orm": "^2.5",
+      "longman/telegram-bot": "0.34",
+      "bashka/bricks_autoload": "^1.0.0",
+      "bashka/bricks_servicelocator": "^1.1.0"
+    }
+}
