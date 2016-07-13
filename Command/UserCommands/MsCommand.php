@@ -1,6 +1,5 @@
 <?php
 namespace Longman\TelegramBot\Commands\UserCommands;
-require_once(__DIR__ . '/MarksCommand.php');
 
 class msCommand extends marksCommand{
   protected $name = 'ms';

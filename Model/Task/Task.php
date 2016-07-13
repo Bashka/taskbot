@@ -1,12 +1,12 @@
 <?php
-namespace Model\Task;
+namespace Bashka\Taskbot\Model\Task;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use Model\User\User;
-use Model\Mark\Mark;
+use Bashka\Taskbot\Model\User\User;
+use Bashka\Taskbot\Model\Mark\Mark;
 
 /**
- * @Entity(repositoryClass="Model\Task\TaskRepository")
+ * @Entity(repositoryClass="Bashka\Taskbot\Model\Task\TaskRepository")
  * @Table(name="task")
  */
 class Task{
@@ -44,7 +44,7 @@ class Task{
   private $completed;
 
   /**
-   * @ManyToMany(targetEntity="Model\Mark\Mark")
+   * @ManyToMany(targetEntity="Bashka\Taskbot\Model\Mark\Mark")
    * @JoinTable(name="task_mark",
    * joinColumns={@JoinColumn(name="task", referencedColumnName="id")},
    * inverseJoinColumns={@JoinColumn(name="mark",referencedColumnName="id")}
@@ -53,7 +53,7 @@ class Task{
   private $marks;
 
   /**
-   * @ManyToMany(targetEntity="Model\User\User")
+   * @ManyToMany(targetEntity="Bashka\Taskbot\Model\User\User")
    * @JoinTable(name="subscriber",
    * joinColumns={@JoinColumn(name="task", referencedColumnName="id")},
    * inverseJoinColumns={@JoinColumn(name="user",referencedColumnName="id")}

@@ -1,5 +1,5 @@
 <?php
-namespace Model\Mark;
+namespace Bashka\Taskbot\Model\Mark;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;

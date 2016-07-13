@@ -1,5 +1,5 @@
 <?php
-namespace Model\Task;
+namespace Bashka\Taskbot\Model\Task;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -23,7 +23,7 @@ class TaskRepository extends EntityRepository{
     }
 
     $rsm = new ResultSetMappingBuilder($this->_em);
-    $rsm->addRootEntityFromClassMetadata('Model\Task\Task', 't');
+    $rsm->addRootEntityFromClassMetadata(Task::class, 't');
 
     $sql = 'SELECT t.* FROM `task` AS t ';
     $sql .= 'INNER JOIN `task_mark` ON t.id = task_mark.task ';

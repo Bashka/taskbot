@@ -1,5 +1,5 @@
 <?php
-namespace Model\User;
+namespace Bashka\Taskbot\Model\User;
 use Doctrine\ORM\EntityRepository;
 
 class UserRepository extends EntityRepository{

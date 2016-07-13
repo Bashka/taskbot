@@ -1,8 +1,8 @@
 <?php
-namespace Model\Mark;
+namespace Bashka\Taskbot\Model\Mark;
 
 /**
- * @Entity(repositoryClass="Model\Mark\MarkRepository")
+ * @Entity(repositoryClass="Bashka\Taskbot\Model\Mark\MarkRepository")
  * @Table(name="mark")
  */
 class Mark{

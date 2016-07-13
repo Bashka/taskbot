@@ -4,45 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0fd6145cdd0d58a0beebc2c972f9f3a6",
-    "content-hash": "cde762b85981adb7fcad3858ed068a7a",
+    "hash": "17577f3f17290c0e7aa00bbaba949a21",
+    "content-hash": "9ef00b73e08f4030b8230bd76cbd2e85",
     "packages": [
-        {
-            "name": "bashka/bricks_autoload",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Bashka/bricks_autoload.git",
-                "reference": "7074ab040ce1e44e73183c30718109e24a69a544"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Bashka/bricks_autoload/zipball/7074ab040ce1e44e73183c30718109e24a69a544",
-                "reference": "7074ab040ce1e44e73183c30718109e24a69a544",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "Loader.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GNU-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Artur Sh. Mamedbekov",
-                    "email": "Artur-Mamedbekov@yandex.ru"
-                }
-            ],
-            "description": "Загрузка классов и ресурсов",
-            "time": "2015-11-07 21:51:35"
-        },
         {
             "name": "bashka/bricks_servicelocator",
             "version": "1.1",

@@ -1,5 +1,5 @@
 <?php
-use Bricks\Autoload\Loader;
+namespace Bashka\Taskbot;
 use Bricks\ServiceLocator\Manager as Locator;
 use Doctrine\ORM\EntityManager;                                                                                
 use Doctrine\ORM\Configuration;                                                                                
@@ -9,7 +9,6 @@ use Longman\TelegramBot\Telegram;
 class App{
   public function run(){
     $locator = new Locator;
-    $locator['loader'] = $this->initLoader($locator);
     $locator['config'] = $this->loadConfig($locator);
     $locator['entity_manager'] = $this->initDoctrine($locator);
     $locator['bot'] = $this->initBot($locator);
@@ -17,19 +16,6 @@ class App{
     $locator['bot']->handleGetUpdates();
 
     $locator['entity_manager']->flush();
-  }
-
-  /**
-   * Инициализация автозагрузчика.
-   *
-   * @param Locator $locator Локатор служб.
-   */
-  public function initLoader(Locator $locator){
-    $loader = new Loader;
-    $loader->pref('Model', __DIR__ . '/Model');
-    $loader->pref('Command', __DIR__ . '/Command');
-
-    return $loader;
   }
 
   /**

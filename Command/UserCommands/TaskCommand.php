@@ -1,9 +1,9 @@
 <?php
 namespace Longman\TelegramBot\Commands\UserCommands;
-use Command\AbstractUserCommand;
+use Bashka\Taskbot\Command\AbstractUserCommand;
 use Longman\TelegramBot\Request;
-use Model\Task\Task;
-use Model\User\User;
+use Bashka\Taskbot\Model\Task\Task;
+use Bashka\Taskbot\Model\User\User;
 
 class taskCommand extends AbstractUserCommand{
   protected $name = 'task';

@@ -1,10 +1,10 @@
 <?php
-namespace Model\User;
+namespace Bashka\Taskbot\Model\User;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @Entity(repositoryClass="Model\User\UserRepository")
+ * @Entity(repositoryClass="Bashka\Taskbot\Model\User\UserRepository")
  * @Table(name="user")
  */
 class User{
@@ -41,7 +41,7 @@ class User{
   private $updated;
 
   /**
-   * @ManyToMany(targetEntity="Model\Mark\Mark")
+   * @ManyToMany(targetEntity="Bashka\Taskbot\Model\Mark\Mark")
    * @JoinTable(name="user_mark",
    * joinColumns={@JoinColumn(name="user", referencedColumnName="id")},
    * inverseJoinColumns={@JoinColumn(name="mark",referencedColumnName="id")}

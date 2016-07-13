@@ -1,6 +1,6 @@
 <?php
 namespace Longman\TelegramBot\Commands\UserCommands;
-use Command\AbstractUserCommand;
+use Bashka\Taskbot\Command\AbstractUserCommand;
 use Longman\TelegramBot\Request;
 
 class doneCommand extends AbstractUserCommand{

@@ -1,6 +1,5 @@
 <?php
 namespace Longman\TelegramBot\Commands\UserCommands;
-require_once(__DIR__ . '/TaskCommand.php');
 
 class tCommand extends taskCommand{
   protected $name = 't';
