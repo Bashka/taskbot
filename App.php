@@ -45,7 +45,8 @@ class App{
     $emConfig->setProxyNamespace('Model\Proxies');
     $emConfig->setAutoGenerateProxyClasses(true);
     return EntityManager::create([                                                                                  
-      'driver' => 'pdo_mysql',                                                                                     
+      'driver' => 'pdo_mysql', 
+      'host' => $config['host'],
       'user' => $config['user'],
       'password' => $config['password'],
       'dbname' => $config['database'],
