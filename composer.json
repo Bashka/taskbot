@@ -1,5 +1,5 @@
 {
-  "name": "bashka/taskbot",
+  "name": "xbelikov/taskbot",
   "version": "0.10",
   "description": "Telegram-бот для управления задачами",
   "license": "GNU-3.0",
@@ -7,29 +7,31 @@
     {
       "name": "Artur Sh. Mamedbekov",
       "email": "Artur-Mamedbekov@yandex.ru"
+    },
+    {
+      "name": "Aleksandr Belikov",
+      "email": "xbelikov@gmail.com"
     }
   ],
   "require": {
-    "php": ">=5.5.0",
+    "php": "7.3.*",
     "doctrine/orm": "^2.5",
     "longman/telegram-bot": "0.34",
     "bashka/bricks_servicelocator": "^1.1.0"
   },
   "autoload": {
     "psr-4": {
-      "Bashka\\Taskbot\\Model\\": "Model/",
-      "Bashka\\Taskbot\\Command\\": "Command/"
+      "Bashka\\Taskbot\\": "Bashka/Taskbot/",
     },
     "classmap": [
-      "App.php",
-      "Command/UserCommands/DoneCommand.php",
-      "Command/UserCommands/DCommand.php",
-      "Command/UserCommands/MarksCommand.php",
-      "Command/UserCommands/MsCommand.php",
-      "Command/UserCommands/TasksCommand.php",
-      "Command/UserCommands/TsCommand.php",
-      "Command/UserCommands/TaskCommand.php",
-      "Command/UserCommands/TCommand.php"
+      "Bashka/Taskbot/Command/UserCommands/DoneCommand.php",
+      "Bashka/Taskbot/Command/UserCommands/DCommand.php",
+      "Bashka/Taskbot/Command/UserCommands/MarksCommand.php",
+      "Bashka/Taskbot/Command/UserCommands/MsCommand.php",
+      "Bashka/Taskbot/Command/UserCommands/TasksCommand.php",
+      "Bashka/Taskbot/Command/UserCommands/TsCommand.php",
+      "Bashka/Taskbot/Command/UserCommands/TaskCommand.php",
+      "Bashka/Taskbot/Command/UserCommands/TCommand.php"
     ]
   }
 }

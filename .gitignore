@@ -1,3 +1,5 @@
+.idea
+deploy/dbdata/
 config/local.php
 composer.phar
 vendor/

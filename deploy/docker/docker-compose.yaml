@@ -1,0 +1,56 @@
+version: '3'
+services:
+  taskbot-php:
+    depends_on:
+      - taskbot-mysql
+    build:
+      context: .
+      dockerfile: ./php/Dockerfile
+    image: php:7.3
+    container_name: taskbot-php
+    restart: unless-stopped
+    tty: true
+    working_dir: /var/www/
+    volumes:
+      - ../../../taskbot:/var/www/taskbot
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - taskbot-network
+
+  taskbot-mysql:
+    image: mysql:5.7.22
+    container_name: taskbot-mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: taskbot
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: taskbot
+      MYSQL_PASSWORD: taskbot_password
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ../dbdata:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - taskbot-network
+
+  taskbot-phpmyadmin:
+    container_name: taskbot-phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    links:
+      - taskbot-mysql:db
+    ports:
+      - 8765:80
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./php/local.ini:/usr/local/etc/php/php.ini
+    networks:
+      - taskbot-network
+
+networks:
+  taskbot-network:
+    driver: bridge
